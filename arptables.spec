@@ -25,7 +25,7 @@ you should install this package.
 
 %build
 
-%make COPT_FLAGS="%{optflags}" KERNEL_DIR=/usr/src/2.6.*
+%make COPT_FLAGS="%{optflags}" KERNEL_DIR=/usr/src/2.6.*/include
 
 %install
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
