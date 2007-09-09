@@ -6,7 +6,8 @@ Group:		System/Kernel and hardware
 License:	GPL
 URL:		http://ebtables.sourceforge.net/
 Source0:	http://prdownloads.sourceforge.net/ebtables/%{name}-v%{version}-2.tar.bz2
-#BuildRequires:  kernel-source >= 2.6.0
+Patch0:		arptables-no_linux_config.h.diff
+BuildRequires:  kernel-source
 Requires:	kernel >= 2.6.0
 BuildRoot:	%{_tmppath}/%{name}-v%{version}-root
 
@@ -20,10 +21,11 @@ you should install this package.
 %prep
 
 %setup -q -n %{name}-v%{version}-2
+%patch0 -p1
 
 %build
 
-%make COPT_FLAGS="%{optflags}"
+%make COPT_FLAGS="%{optflags}" KERNEL_DIR=/usr/src/2.6.*
 
 %install
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
