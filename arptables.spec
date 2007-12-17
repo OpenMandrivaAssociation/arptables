@@ -9,7 +9,6 @@ Source0:	http://prdownloads.sourceforge.net/ebtables/%{name}-v%{version}-2.tar.b
 Patch0:		arptables-no_linux_config.h.diff
 BuildRequires:  kernel-source
 Requires:	kernel >= 2.6.0
-BuildRoot:	%{_tmppath}/%{name}-v%{version}-root
 
 %description
 The arptables utility controls the arpfilter network packet
