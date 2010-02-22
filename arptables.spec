@@ -3,7 +3,7 @@ Name:		arptables
 Version:	0.0.3
 Release:	%mkrel 10
 Group:		System/Kernel and hardware
-License:	GPL
+License:	GPLv2
 URL:		http://ebtables.sourceforge.net/
 Source0:	http://prdownloads.sourceforge.net/ebtables/%{name}-v%{version}-3.tar.gz
 BuildRequires:  kernel-source
@@ -17,19 +17,15 @@ which arp requests and/or replies this machine accepts and sends,
 you should install this package.
 
 %prep
-
 %setup -q -n %{name}-v%{version}-3
 
 %build
-
 %make COPT_FLAGS="%{optflags}" KERNEL_DIR=/usr/src/linux/include
 
 %install
 rm -rf %{buildroot}
-
 install -d %{buildroot}/sbin
 install -d %{buildroot}%{_mandir}/man8
-
 install -m755 arptables %{buildroot}/sbin/
 install -m644 arptables.8 %{buildroot}%{_mandir}/man8/
 
