@@ -1,11 +1,11 @@
 Summary:	Userspace control program for the arptables network filter
 Name:		arptables
-Version:	0.0.3
-Release:	%mkrel 10
+Version:	0.0.3.3
+Release:	%mkrel 1
 Group:		System/Kernel and hardware
 License:	GPLv2
 URL:		http://ebtables.sourceforge.net/
-Source0:	http://prdownloads.sourceforge.net/ebtables/%{name}-v%{version}-3.tar.gz
+Source0:	http://prdownloads.sourceforge.net/ebtables/%{name}-%{version}.tar.gz
 BuildRequires:  kernel-source
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
@@ -17,7 +17,7 @@ which arp requests and/or replies this machine accepts and sends,
 you should install this package.
 
 %prep
-%setup -q -n %{name}-v%{version}-3
+%setup -q -n %{name}-%{version}
 
 %build
 %make COPT_FLAGS="%{optflags}" KERNEL_DIR=/usr/src/linux/include
