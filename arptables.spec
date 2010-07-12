@@ -1,6 +1,6 @@
 Summary:	Userspace control program for the arptables network filter
 Name:		arptables
-Version:	0.0.3.3
+Version:	0.0.3.4
 Release:	%mkrel 1
 Group:		System/Kernel and hardware
 License:	GPLv2
@@ -17,7 +17,7 @@ which arp requests and/or replies this machine accepts and sends,
 you should install this package.
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q 
 
 %build
 %make COPT_FLAGS="%{optflags}" KERNEL_DIR=/usr/src/linux/include
