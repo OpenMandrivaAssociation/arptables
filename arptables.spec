@@ -1,7 +1,7 @@
 Summary:	Userspace control program for the arptables network filter
 Name:		arptables
 Version:	0.0.4
-Release:	1
+Release:	2
 Group:		System/Kernel and hardware
 License:	GPLv2
 URL:		http://ebtables.sourceforge.net/
