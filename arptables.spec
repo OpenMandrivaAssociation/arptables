@@ -4,7 +4,7 @@ Version:	0.0.4
 Release:	2
 Group:		System/Kernel and hardware
 License:	GPLv2
-URL:		http://ebtables.sourceforge.net/
+URL:		https://ebtables.sourceforge.net/
 Source0:	https://sourceforge.net/projects/ebtables/files/arptables/arptables-v0.0.4/%{name}-v%{version}.tar.gz
 BuildRequires:  kernel-source
 
